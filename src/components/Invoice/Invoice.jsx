@@ -44,7 +44,7 @@ const Invoice = ({ invoice, onInvoiceClick }) => {
             <div className={`invoice__status-wrap ${invoiceStatusWrap}`}>
               <div className={`invoice__status-dot ${invoiceStatusDot}`}></div>
               <p className={`invoice__status ${invoiceStatus}`}>
-                {invoice.status.toUpperCase()}
+                {invoice.status.charAt(0).toUpperCase() + invoice.status.slice(1)}
               </p>
             </div>
 
