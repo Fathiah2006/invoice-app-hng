@@ -25,7 +25,7 @@ const StatusBar = ({ status, onEditClick, onDelete, onMark }) => {
         <p className="status-bar__label">Status</p>
         <div className={`status-bar__status-wrap ${invoiceStatusWrap}`}>
           <div className={`status-bar__status-dot ${invoiceStatusDot}`}></div>
-          <p className={`status-bar__status ${invoiceStatus}`}>{status.toUpperCase()}</p>
+          <p className={`status-bar__status ${invoiceStatus}`}>{status.charAt(0).toUpperCase() + status.slice(1)}</p>
         </div>
       </div>
 
