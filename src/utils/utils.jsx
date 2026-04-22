@@ -39,7 +39,7 @@ const filter = (invoices, filterType) => {
 };
 
 const check = (e, filterType, setFilterType) => {
-  const type = e.target.parentElement.querySelector(
+  const type = e.currentTarget.querySelector(
     ".invoices__filter-name"
   ).textContent;
 
