@@ -14,9 +14,9 @@ const Invoices = ({ invoices, onInvoiceClick, onSave }) => {
   const [filteredInvoices, setFilteredInvoices] = useState([]);
 
   const [filterType, setFilterType] = useState({
-    draft: false,
-    paid: false,
-    pending: false,
+    Draft: false,
+    Paid: false,
+    Pending: false,
   });
 
   const isMobile = isMobileScreen();
@@ -47,7 +47,7 @@ const Invoices = ({ invoices, onInvoiceClick, onSave }) => {
               isMobile
                 ? `${invoices.length} invoices`
                 : `There are ${
-                    filterType.draft || filterType.paid || filterType.pending
+                    filterType.Draft || filterType.Paid || filterType.Pending
                       ? filteredInvoices.length
                       : invoices.length
                   } total invoices`
@@ -66,7 +66,7 @@ const Invoices = ({ invoices, onInvoiceClick, onSave }) => {
 
         {invoices.length ? (
           <ul className="invoices__list">
-            {filterType.draft || filterType.paid || filterType.pending ? (
+            {filterType.Draft || filterType.Paid || filterType.Pending ? (
               filteredInvoices.length ? (
                 filteredInvoices.map((invoice, id) => (
                   <Invoice
