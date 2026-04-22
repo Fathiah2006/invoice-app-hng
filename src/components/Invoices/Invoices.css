@@ -123,6 +123,7 @@
   justify-content: flex-start;
   align-items: center;
   gap: 13px;
+  cursor: pointer;
 }
 
 .invoices__filter-check {
